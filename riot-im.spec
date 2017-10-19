@@ -4,13 +4,13 @@
 %global __requires_exclude (npm|libnode|libffmpeg)
 
 Name:          riot-im
-Version:       0.12.4
+Version:       0.12.7
 Release:       1%{?dist}
 Summary:       Riot.im - open team collaboration
 
 License:       Apache 2.0
 URL:           https://about.riot.im/
-Source0:       riot-web-0.12.4.tar.gz
+Source0:       https://codeload.github.com/vector-im/riot-web/tar.gz/v%{version}#/riot-web-%{version}.tar.gz
 
 BuildRequires: rpm
 BuildRequires: cpio
@@ -25,8 +25,6 @@ the Matrix React SDK (https://github.com/matrix-org/matrix-react-sdk).
 %prep
 %autosetup -n riot-web-%{version}
 npm install
-cp node_modules/matrix-react-sdk/lib/wrappers/WithMatrixClient.js node_modules/matrix-react-sdk/lib/wrappers/withMatrixClient.js
-cp node_modules/matrix-js-sdk/lib/Reemitter.js node_modules/matrix-js-sdk/lib/ReEmitter.js
 cp config.sample.json config.json
 
 %build
@@ -44,5 +42,7 @@ rpm2cpio electron_app/dist/riot-web-%{version}.rpm | cpio -idmv -D %{buildroot}
 /usr/*
 
 %changelog
+* Thu Oct 19 2017 dmytr 0.12.7-1
+- New version
 * Thu Sep 21 2017 dmytr 0.12.4-1
 - Initial packaging
