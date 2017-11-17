@@ -4,7 +4,7 @@
 %global __requires_exclude (npm|libnode|libffmpeg)
 
 Name:          riot-im
-Version:       0.12.7
+Version:       0.13.1
 Release:       1%{?dist}
 Summary:       Riot.im - open team collaboration
 
@@ -25,6 +25,7 @@ the Matrix React SDK (https://github.com/matrix-org/matrix-react-sdk).
 %prep
 %autosetup -n riot-web-%{version}
 npm install
+npm install 7zip-bin-linux
 cp config.sample.json config.json
 
 %build
@@ -42,6 +43,8 @@ rpm2cpio electron_app/dist/riot-web-%{version}.rpm | cpio -idmv -D %{buildroot}
 /usr/*
 
 %changelog
+* Fri Nov 17 2017 dmytr 0.13.1-1
+- New version
 * Thu Oct 19 2017 dmytr 0.12.7-1
 - New version
 * Thu Sep 21 2017 dmytr 0.12.4-1
