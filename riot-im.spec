@@ -41,7 +41,7 @@ rpm2cpio electron_app/dist/riot-web-%{version}.rpm | cpio -idmv -D %{buildroot}
 %doc CHANGELOG.md
 /opt/Riot
 /usr/share/applications/riot-web.desktop
-/usr/icons/hicolor/*/apps/riot-web.png
+/usr/share/icons/hicolor/*/apps/riot-web.png
 
 %changelog
 * Fri Nov 17 2017 dmytr 0.13.1-1
