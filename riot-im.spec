@@ -5,7 +5,7 @@
 
 Name:          riot-im
 Version:       0.13.1
-Release:       1%{?dist}
+Release:       2%{?dist}
 Summary:       Riot.im - open team collaboration
 
 License:       Apache 2.0
@@ -39,8 +39,9 @@ rpm2cpio electron_app/dist/riot-web-%{version}.rpm | cpio -idmv -D %{buildroot}
 %files
 %license LICENSE
 %doc CHANGELOG.md
-/opt/*
-/usr/*
+/opt/Riot
+/usr/share/applications/riot-web.desktop
+/usr/icons/hicolor/*/apps/riot-web.png
 
 %changelog
 * Fri Nov 17 2017 dmytr 0.13.1-1
