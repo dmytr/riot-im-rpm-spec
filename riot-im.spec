@@ -4,13 +4,13 @@
 %global __requires_exclude (npm|libnode|libffmpeg)
 
 Name:          riot-im
-Version:       0.13.1
+Version:       0.13.3
 Release:       2%{?dist}
 Summary:       Riot.im - open team collaboration
 
 License:       Apache 2.0
 URL:           https://about.riot.im/
-Source0:       https://codeload.github.com/vector-im/riot-web/tar.gz/v%{version}#/riot-web-%{version}.tar.gz
+Source0:       https://github.com/vector-im/riot-web/archive/v0.13.3.tar.gz#/riot-web-%{version}.tar.gz
 
 BuildRequires: rpm
 BuildRequires: cpio
@@ -44,6 +44,8 @@ rpm2cpio electron_app/dist/riot-web-%{version}.rpm | cpio -idmv -D %{buildroot}
 /usr/share/icons/hicolor/*/apps/riot-web.png
 
 %changelog
+* Tue Dec 5 2017 dmytr 0.13.3-1
+- New version
 * Fri Nov 17 2017 dmytr 0.13.1-1
 - New version
 * Thu Oct 19 2017 dmytr 0.12.7-1
