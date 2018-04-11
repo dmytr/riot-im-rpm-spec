@@ -44,7 +44,7 @@ rpm2cpio electron_app/dist/riot-web-%{version}.rpm | cpio -idmv -D %{buildroot}
 /usr/share/icons/hicolor/*/apps/riot-web.png
 
 %changelog
-* Wd Apr 11 2018 dmytr 0.14.0-1
+* Wed Apr 11 2018 dmytr 0.14.0-1
 - New version
 * Tue Dec 5 2017 dmytr 0.13.3-1
 - New version
