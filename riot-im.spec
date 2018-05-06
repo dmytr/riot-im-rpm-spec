@@ -4,7 +4,7 @@
 %global __requires_exclude (npm|libnode|libffmpeg)
 
 Name:          riot-im
-Version:       0.14.0
+Version:       0.14.2
 Release:       1%{?dist}
 Summary:       Riot.im - open team collaboration
 
@@ -44,6 +44,8 @@ rpm2cpio electron_app/dist/riot-web-%{version}.rpm | cpio -idmv -D %{buildroot}
 /usr/share/icons/hicolor/*/apps/riot-web.png
 
 %changelog
+* Sun May 06 2018 dmytr 0.14.2-1
+- New version
 * Wed Apr 11 2018 dmytr 0.14.0-1
 - New version
 * Tue Dec 5 2017 dmytr 0.13.3-1
